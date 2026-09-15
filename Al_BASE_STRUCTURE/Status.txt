@@ -1,0 +1,11 @@
+ Job Name                         :  Al
+ type of calculation              :  geometry optimization
+ plane wave basis set cut-off     :  420.0000   eV
+ using functional                 :  Perdew Burke Ernzerhof
+
+ Number of iterations             :  3
+ Energy                           :  -3.54870594E+003  eV
+ Convergence                      :  2.857628E-006  eV/atom
+ Max. Displacement                :  1.956283E-003  A
+ Max. Force                       :  5.032598E-003  eV/A
+ Max. Stress                      :  4.765731E-002  GPa

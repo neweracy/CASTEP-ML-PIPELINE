@@ -1,0 +1,11 @@
+ Job Name                         :  Ti
+ type of calculation              :  geometry optimization
+ plane wave basis set cut-off     :  420.0000   eV
+ using functional                 :  Perdew Burke Ernzerhof
+
+ Number of iterations             :  3
+ Energy                           :  -2.55014266E+004  eV
+ Convergence                      :  5.973449E-006  eV/atom
+ Max. Displacement                :  1.282162E-003  A
+ Max. Force                       :  7.163346E-003  eV/A
+ Max. Stress                      :  1.704380E-001  GPa

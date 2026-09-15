@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="latin1"?>
+<!DOCTYPE XSD []>
+<XSD Version="23.1" WrittenBy="Materials Studio 23.1">
+	<AtomisticTreeRoot ID="1" NumProperties="65" NumChildren="1" Name="Al">
+		<Property Name="AngleAxisType" DefinedOn="AngleBetweenPlanesBender" Type="Enumerated"/>
+		<Property Name="AngleEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BeadDocumentID" DefinedOn="MesoMoleculeSet" Type="String"/>
+		<Property Name="BendBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BendTorsionBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="EFGAsymmetry" DefinedOn="Atom" Type="Double"/>
+		<Property Name="EFGQuadrupolarCoupling" DefinedOn="Atom" Type="Double"/>
+		<Property Name="ElectrostaticEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="FaceMillerIndex" DefinedOn="GrowthFace" Type="MillerIndex"/>
+		<Property Name="FacetTransparency" DefinedOn="GrowthFace" Type="Float"/>
+		<Property Name="FermiLevel" DefinedOn="ScalarFieldBase" Type="Double"/>
+		<Property Name="Force" DefinedOn="Matter" Type="CoDirection"/>
+		<Property Name="FrameFilter" DefinedOn="Trajectory" Type="String"/>
+		<Property Name="HarmonicForceConstant" DefinedOn="HarmonicRestraint" Type="Double"/>
+		<Property Name="HarmonicMinimum" DefinedOn="HarmonicRestraint" Type="Double"/>
+		<Property Name="HydrogenBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ImportOrder" DefinedOn="Bondable" Type="UnsignedInteger"/>
+		<Property Name="InversionEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="IsBackboneAtom" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsChiralCenter" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsOutOfPlane" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsRepeatArrowVisible" DefinedOn="ElectrodeWire" Type="Boolean"/>
+		<Property Name="KineticEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="LineExtentPadding" DefinedOn="BestFitLineMonitor" Type="Double"/>
+		<Property Name="LinkageGroupName" DefinedOn="Linkage" Type="String"/>
+		<Property Name="ListIdentifier" DefinedOn="PropertyList" Type="String"/>
+		<Property Name="NMRShielding" DefinedOn="Atom" Type="Double"/>
+		<Property Name="NonBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="NormalMode" DefinedOn="Bondable" Type="Direction"/>
+		<Property Name="NormalModeFrequency" DefinedOn="Bondable" Type="Double"/>
+		<Property Name="NumScanSteps" DefinedOn="LinearScan" Type="UnsignedInteger"/>
+		<Property Name="OrbitalCutoffRadius" DefinedOn="Bondable" Type="Double"/>
+		<Property Name="PlaneExtentPadding" DefinedOn="BestFitPlaneMonitor" Type="Double"/>
+		<Property Name="PotentialEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="QuantizationValue" DefinedOn="ScalarFieldBase" Type="Double"/>
+		<Property Name="RelativeVelocity" DefinedOn="Matter" Type="Direction"/>
+		<Property Name="RepeatArrowScale" DefinedOn="ElectrodeWire" Type="Float"/>
+		<Property Name="RestraintEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ScanEnd" DefinedOn="LinearScan" Type="Double"/>
+		<Property Name="ScanStart" DefinedOn="LinearScan" Type="Double"/>
+		<Property Name="SeparatedStretchStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ServerDipoleMoment" DefinedOn="MatterGroupProperties" Type="Direction"/>
+		<Property Name="SimulationStep" DefinedOn="Trajectory" Type="Integer"/>
+		<Property Name="SourceDocumentID" DefinedOn="AtomisticCollectionTreeRoot" Type="String"/>
+		<Property Name="SourceID" DefinedOn="PhysicalSystem" Type="String"/>
+		<Property Name="SpinQuantizationDirection" DefinedOn="Atom" Type="Direction"/>
+		<Property Name="Stiffness" DefinedOn="SymmetryMatterHessian" Type="Matrix6x6"/>
+		<Property Name="StretchBendStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="StretchStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="StretchTorsionStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="Temperature" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ThreeBodyNonBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionBendBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TotalEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="Units" DefinedOn="ScalarFieldBase" Type="String"/>
+		<Property Name="UreyBradleyEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ValenceCrossTermEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ValenceDiagonalEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="VanDerWaalsEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="_ServerAtomNames" DefinedOn="IndexProvider" Type="String"/>
+		<Property Name="_Stress" DefinedOn="MatterSymmetrySystem" Type="Matrix"/>
+		<Property Name="_TrajectoryStress" DefinedOn="MatterSymmetrySystem" Type="Matrix"/>
+		<SymmetrySystem ID="2" HasProperties="1" Mapping="3" Children="ci(35):35+4" Normalized="1" Name="Al" UserID="129" OverspecificationTolerance="0.05">
+			<Properties _Stress="-6.83262630402018e-005,8.22376371962222e-011,1.22903848966446e-011,8.22376371962221e-011,-6.83254838627982e-005,-2.26651844454865e-011,1.22903848966446e-011,-2.26651844454864e-011,-6.83257181105961e-005"/>
+			<MappingSet ID="39" SymmetryDefinition="8" ActiveSystem="2" NumFamilies="1" OwnsTotalConstraintMapping="1" TotalConstraintMapping="3">
+				<MappingFamily ID="40" NumImageMappings="7">
+					<IdentityMapping ID="41" Element="1,0,0,0,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(32):4+4,28+9" DefectObjects="8,42,37" NumImages="32" NumDefects="3">
+						<Atom3d ID="4" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="1" DisplayStyle="Ball and Stick" XYZ="1.24778320157419e-008,5.36132396316613e-009,2.73767514022205e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000186546684539811,7.2185930476715e-005,-9.33756552183696e-005"/>
+						</Atom3d>
+						<Atom3d ID="5" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="2" DisplayStyle="Ball and Stick" XYZ="-6.71936063216314e-008,0.250222046250447,0.250222063673044" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000913139917418987,0.111525629109762,0.111383191529905"/>
+						</Atom3d>
+						<Atom3d ID="6" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="3" DisplayStyle="Ball and Stick" XYZ="0.250222060834844,-5.94797639092237e-008,0.250222092046796" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.112052023311084,0.000470466984852222,0.111407363839714"/>
+						</Atom3d>
+						<Atom3d ID="7" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="4" DisplayStyle="Ball and Stick" XYZ="0.250222110485033,0.250222120647375,-8.17223329894936e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.111537028537071,0.111077729262476,0.000782988135404569"/>
+						</Atom3d>
+						<Atom3d ID="9" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="5" DisplayStyle="Ball and Stick" XYZ="0.499999934629712,-1.75377814307455e-008,-4.40382643254093e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000589135881939286,0.000367825666546692,0.000670890608861569"/>
+						</Atom3d>
+						<Atom3d ID="10" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="6" DisplayStyle="Ball and Stick" XYZ="0.500000047871281,0.250227164978295,0.250227128809304" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.000412796520011738,0.109907676618506,0.110324417077553"/>
+						</Atom3d>
+						<Atom3d ID="11" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="7" DisplayStyle="Ball and Stick" XYZ="0.749777914987808,-2.94301823319694e-008,0.25022216344335" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.112029026115743,0.00028673448917576,0.110687305084218"/>
+						</Atom3d>
+						<Atom3d ID="12" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="8" DisplayStyle="Ball and Stick" XYZ="0.74977795632155,0.250222143076794,-6.61249684949654e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.112271738612606,0.111085267626004,0.000747323716868274"/>
+						</Atom3d>
+						<Atom3d ID="13" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="9" DisplayStyle="Ball and Stick" XYZ="-1.85716183416577e-008,0.499999950742142,-2.69174685812135e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000137304338181022,0.000684857611088681,0.000372210772543127"/>
+						</Atom3d>
+						<Atom3d ID="14" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="10" DisplayStyle="Ball and Stick" XYZ="-3.45482174842743e-008,0.749777923480051,0.250222146665406" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000653617242172862,-0.111725835442874,0.110785669989413"/>
+						</Atom3d>
+						<Atom3d ID="15" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="11" DisplayStyle="Ball and Stick" XYZ="0.250227161049905,0.500000001310534,0.250227135395269" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.110475016637211,5.35002467835607e-005,0.110638086994351"/>
+						</Atom3d>
+						<Atom3d ID="16" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="12" DisplayStyle="Ball and Stick" XYZ="0.250222149569407,0.749777935144478,-3.84750500642927e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.111284903561031,-0.112043316464622,0.000774441291404177"/>
+						</Atom3d>
+						<Atom3d ID="17" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="13" DisplayStyle="Ball and Stick" XYZ="0.499999971484193,0.499999991158122,-6.38682753345934e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000357589271849018,0.000572787070371973,0.000638229314857614"/>
+						</Atom3d>
+						<Atom3d ID="18" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="14" DisplayStyle="Ball and Stick" XYZ="0.500000019765117,0.749772833797851,0.250227205180931" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.000314612435671862,-0.11042327600062,0.109570584582037"/>
+						</Atom3d>
+						<Atom3d ID="19" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="15" DisplayStyle="Ball and Stick" XYZ="0.749772825024226,0.499999978742043,0.250227226601191" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.110442270492304,0.00027577715546191,0.109617256591546"/>
+						</Atom3d>
+						<Atom3d ID="20" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="16" DisplayStyle="Ball and Stick" XYZ="0.749777899443274,0.749777892159429,1.26856768111046e-008" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.111881006039039,-0.111697010985005,0.000150256993735403"/>
+						</Atom3d>
+						<Atom3d ID="21" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="17" DisplayStyle="Ball and Stick" XYZ="-8.91112418796856e-009,-2.34656979691613e-008,0.49999994451724" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000277599417975511,4.69300684281872e-005,0.000789764740814809"/>
+						</Atom3d>
+						<Atom3d ID="22" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="18" DisplayStyle="Ball and Stick" XYZ="-4.85654717252861e-008,0.25022217202103,0.74977792264778" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000874920101145877,0.110522013644799,-0.111567879820938"/>
+						</Atom3d>
+						<Atom3d ID="23" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="19" DisplayStyle="Ball and Stick" XYZ="0.250222178234741,-1.0680755769111e-008,0.749777909222499" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.11060950243967,0.000371849566014768,-0.11167693853743"/>
+						</Atom3d>
+						<Atom3d ID="24" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="20" DisplayStyle="Ball and Stick" XYZ="0.250227155489851,0.25022716996934,0.500000054251081" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.110586764165636,0.110322912530593,-0.000490142337894579"/>
+						</Atom3d>
+						<Atom3d ID="25" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="21" DisplayStyle="Ball and Stick" XYZ="0.499999987512556,-6.86229257052865e-008,0.49999999465852" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000433457206362902,0.000733589649447823,0.000221600621643008"/>
+						</Atom3d>
+						<Atom3d ID="26" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="22" DisplayStyle="Ball and Stick" XYZ="0.499999998949636,0.250227211718871,0.749772866580051" Components="Al" FormalCharge="0/1">
+							<Properties Force="-5.63675258320028e-005,0.109619250515507,-0.110743490718817"/>
+						</Atom3d>
+						<Atom3d ID="27" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="23" DisplayStyle="Ball and Stick" XYZ="0.74977788919838,6.37022314295284e-008,0.749777917767077" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.111739064754251,-0.000307121471210694,-0.1119056980872"/>
+						</Atom3d>
+						<Atom3d ID="28" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="24" DisplayStyle="Ball and Stick" XYZ="0.749772865597264,0.250227197055409,0.500000005807076" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.111202181437198,0.109974524313823,-0.000149184229982289"/>
+						</Atom3d>
+						<Atom3d ID="29" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="25" DisplayStyle="Ball and Stick" XYZ="-4.90203125029536e-008,0.499999981266182,0.500000007363434" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.00078046964747265,0.000283968129878597,-3.05938877171239e-005"/>
+						</Atom3d>
+						<Atom3d ID="30" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="26" DisplayStyle="Ball and Stick" XYZ="1.99011804339096e-008,0.74977789511033,0.749777923799897" Components="Al" FormalCharge="0/1">
+							<Properties Force="6.33999373313932e-005,-0.111288468763569,-0.11160626001676"/>
+						</Atom3d>
+						<Atom3d ID="31" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="27" DisplayStyle="Ball and Stick" XYZ="0.250227220880511,0.499999986290353,0.749772850521083" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.109942189249145,0.00042113105210727,-0.110643818413023"/>
+						</Atom3d>
+						<Atom3d ID="32" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="28" DisplayStyle="Ball and Stick" XYZ="0.2502271711464,0.74977287096926,0.500000021596639" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.110286679390598,-0.111066955639166,-9.16238781864095e-005"/>
+						</Atom3d>
+						<Atom3d ID="33" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="29" DisplayStyle="Ball and Stick" XYZ="0.500000016685394,0.500000013280547,0.50000000125481" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.000247275248178796,-1.69732272169187e-005,0.000101852645224883"/>
+						</Atom3d>
+						<Atom3d ID="34" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="30" DisplayStyle="Ball and Stick" XYZ="0.499999947749522,0.749772896701049,0.749772884733015" Components="Al" FormalCharge="0/1">
+							<Properties Force="0.000532175296118466,-0.110795863065801,-0.110690990785451"/>
+						</Atom3d>
+						<Atom3d ID="35" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="31" DisplayStyle="Ball and Stick" XYZ="0.749772876916709,0.499999940559021,0.749772851656987" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.111215904425378,0.00103809408469919,-0.110662766861099"/>
+						</Atom3d>
+						<Atom3d ID="36" HasProperties="1" Mapping="41" Parent="2" Name="AL1" UserID="32" DisplayStyle="Ball and Stick" XYZ="0.749772834604024,0.749772823724598,0.49999996289145" Components="Al" FormalCharge="0/1">
+							<Properties Force="-0.11076121862774,-0.110349880266718,0.000689328699622381"/>
+						</Atom3d>
+						<SpaceGroup ID="8" Parent="2" Children="42" DisplayStyle="Solid" AVector="8.09503628539362,-5.69329173813665e-010,-1.44244594643933e-009" BVector="-5.69328336576882e-010,8.09503627048929,-5.10768895724419e-010" CVector="-1.44244670681161e-009,-5.10769771981724e-010,8.09503627652394" Color="255,255,255,255" OrientationBase="C along Z, B in YZ plane" Centering="3D Primitive-Centered" Lattice="3D Triclinic" GroupName="P1" Operators="1,0,0,0,0,1,0,0,0,0,1,0" DisplayRange="0,1,0,1,0,1" LineThickness="2" CylinderRadius="0.2" LabelAxes="1" ActiveSystem="2" ITNumber="1" LongName="P 1" Qualifier="Origin-1" SchoenfliesName="C1-1" System="Triclinic" Class="1"/>
+						<ReciprocalLattice3D ID="42" Parent="8" Visible="0"/>
+						<IndexProvider ID="37" HasProperties="1" Parent="2" Name="CASTEP Indexes" NumTriggerSets="1">
+							<Properties _ServerAtomNames="Al(1)|Al(2)|Al(3)|Al(4)|Al(5)|Al(6)|Al(7)|Al(8)|Al(9)|Al(10)|Al(11)|Al(12)|Al(13)|Al(14)|Al(15)|Al(16)|Al(17)|Al(18)|Al(19)|Al(20)|Al(21)|Al(22)|Al(23)|Al(24)|Al(25)|Al(26)|Al(27)|Al(28)|Al(29)|Al(30)|Al(31)|Al(32)"/>
+							<MonitorTriggerSet ID="43" Objects="ci(32):4+4,28+9" EventMask="13"/>
+						</IndexProvider>
+					</IdentityMapping>
+					<ImageMapping ID="44" Element="1,0,0,1,0,1,0,0,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(26):2+45,6x0,2+47,6x0,2+49,6x0,2+51" NumImages="8">
+						<Atom3d ID="45" Mapping="44" ImageOf="4"/>
+						<Atom3d ID="46" Mapping="44" ImageOf="5"/>
+						<Atom3d ID="47" Mapping="44" ImageOf="13"/>
+						<Atom3d ID="48" Mapping="44" ImageOf="14"/>
+						<Atom3d ID="49" Mapping="44" ImageOf="21"/>
+						<Atom3d ID="50" Mapping="44" ImageOf="22"/>
+						<Atom3d ID="51" Mapping="44" ImageOf="29"/>
+						<Atom3d ID="52" Mapping="44" ImageOf="30"/>
+					</ImageMapping>
+					<ImageMapping ID="53" Element="1,0,0,0,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(23):54,0,55,0,56,0,57,9x0,58,0,59,0,60,0,61" NumImages="8">
+						<Atom3d ID="54" Mapping="53" ImageOf="4"/>
+						<Atom3d ID="55" Mapping="53" ImageOf="6"/>
+						<Atom3d ID="56" Mapping="53" ImageOf="9"/>
+						<Atom3d ID="57" Mapping="53" ImageOf="11"/>
+						<Atom3d ID="58" Mapping="53" ImageOf="21"/>
+						<Atom3d ID="59" Mapping="53" ImageOf="23"/>
+						<Atom3d ID="60" Mapping="53" ImageOf="25"/>
+						<Atom3d ID="61" Mapping="53" ImageOf="27"/>
+					</ImageMapping>
+					<ImageMapping ID="62" Element="1,0,0,1,0,1,0,1,0,0,1,0" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(17):63,15x0,64" NumImages="2">
+						<Atom3d ID="63" Mapping="62" ImageOf="4"/>
+						<Atom3d ID="64" Mapping="62" ImageOf="21"/>
+					</ImageMapping>
+					<ImageMapping ID="65" Element="1,0,0,0,0,1,0,0,0,0,1,1" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="ci(16):66,2x0,2+67,2x0,2+69,2x0,2+71,2x0,73" NumImages="8">
+						<Atom3d ID="66" Mapping="65" ImageOf="4"/>
+						<Atom3d ID="67" Mapping="65" ImageOf="7"/>
+						<Atom3d ID="68" Mapping="65" ImageOf="9"/>
+						<Atom3d ID="69" Mapping="65" ImageOf="12"/>
+						<Atom3d ID="70" Mapping="65" ImageOf="13"/>
+						<Atom3d ID="71" Mapping="65" ImageOf="16"/>
+						<Atom3d ID="72" Mapping="65" ImageOf="17"/>
+						<Atom3d ID="73" Mapping="65" ImageOf="20"/>
+					</ImageMapping>
+					<ImageMapping ID="74" Element="1,0,0,1,0,1,0,0,0,0,1,1" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="75,0,0,0,0,0,0,0,76" NumImages="2">
+						<Atom3d ID="75" Mapping="74" ImageOf="4"/>
+						<Atom3d ID="76" Mapping="74" ImageOf="13"/>
+					</ImageMapping>
+					<ImageMapping ID="77" Element="1,0,0,0,0,1,0,1,0,0,1,1" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="78,0,0,0,79" NumImages="2">
+						<Atom3d ID="78" Mapping="77" ImageOf="4"/>
+						<Atom3d ID="79" Mapping="77" ImageOf="9"/>
+					</ImageMapping>
+					<ImageMapping ID="80" Element="1,0,0,1,0,1,0,1,0,0,1,1" Constraint="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="81" NumImages="1">
+						<Atom3d ID="81" Mapping="80" ImageOf="4"/>
+					</ImageMapping>
+					<MappingRepairs NumRepairs="0"/>
+				</MappingFamily>
+				<InfiniteMapping ID="3" Element="1,0,0,0,0,1,0,0,0,0,1,0" MappedObjects="2,38" NumImages="1">
+					<AtomisticClassicalEnergy ID="38" HasProperties="1" Mapping="3" Parent="2" Name="CASTEP Energy">
+						<Properties TotalEnergy="-81835.1044738314"/>
+					</AtomisticClassicalEnergy>
+				</InfiniteMapping>
+			</MappingSet>
+		</SymmetrySystem>
+	</AtomisticTreeRoot>
+</XSD>

@@ -1,0 +1,11 @@
+ Job Name                         :  Ti14Al2
+ type of calculation              :  geometry optimization
+ plane wave basis set cut-off     :  420.0000   eV
+ using functional                 :  Perdew Burke Ernzerhof
+
+ Number of iterations             :  8
+ Energy                           :  -2.25371041E+004  eV
+ Convergence                      :  3.487023E-005  eV/atom
+ Max. Displacement                :  3.639607E-003  A
+ Max. Force                       :  1.190991E-002  eV/A
+ Max. Stress                      :  2.624793E-002  GPa

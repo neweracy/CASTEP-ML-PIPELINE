@@ -1,0 +1,11 @@
+ Job Name                         :  Ti8Al8
+ type of calculation              :  geometry optimization
+ plane wave basis set cut-off     :  420.0000   eV
+ using functional                 :  Perdew Burke Ernzerhof
+
+ Number of iterations             :  9
+ Energy                           :  -1.36429643E+004  eV
+ Convergence                      :  5.695966E-006  eV/atom
+ Max. Displacement                :  2.611337E-003  A
+ Max. Force                       :  1.136159E-002  eV/A
+ Max. Stress                      :  1.205500E-001  GPa
