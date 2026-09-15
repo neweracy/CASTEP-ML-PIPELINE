@@ -81,6 +81,15 @@ Where:
 
 These are computed from DFT calculations of pure element ground states.
 
+## Understanding Results
+
+**📊 [GRAPH_GUIDE.md](GRAPH_GUIDE.md)** - Comprehensive guide to interpreting the formation energy curve:
+- What each graph element means (DFT points, GPR curve, confidence intervals)
+- How to read formation energies and predict stability
+- Physical interpretation of results
+- Model performance metrics explained
+- When to trust predictions vs. when to calculate more DFT
+
 ## Dataset Format
 
 The generated CSV contains:

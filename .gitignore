@@ -51,6 +51,13 @@ wheels/
 *.csv
 ML_Data/*.csv
 
+# ML Models and Outputs
+models/
+*.pkl
+*.joblib
+*.png
+predictions.csv
+
 # Temporary/Task Folders
 ~TASK_*/
 

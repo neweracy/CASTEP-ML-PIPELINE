@@ -3,6 +3,12 @@
 ## Project Overview
 This project processes CASTEP DFT calculation outputs for Ti-Al alloys and prepares datasets for machine learning models to predict formation energies.
 
+## Documentation
+- **README.md** - Project overview, installation, and quick start
+- **CLAUDE.md** (this file) - Development guidelines and standards
+- **GRAPH_GUIDE.md** - Comprehensive guide to interpreting ML model outputs
+- **IMPROVEMENTS.md** - Detailed log of code improvements
+
 ## Tech Stack
 - **Python**: >=3.9
 - **Package Manager**: uv (modern, fast Python package manager)
@@ -78,8 +84,15 @@ source .venv/bin/activate  # Linux/Mac
 # Parse CASTEP files
 uv run python parse_castep.py
 
-# Run with specific Python version
-uv run --python 3.9 python parse_castep.py
+# Train ML model
+uv run python train_ml.py
+
+# Train and save model + predictions
+uv run python train_ml.py --save-model --save-predictions
+
+# Using Make shortcuts
+make run     # Parse CASTEP files
+make train   # Train ML model (saves everything)
 ```
 
 ### Code Quality
@@ -105,6 +118,9 @@ uv run ruff check --fix .
 ### Output Files (Do NOT Track)
 - CASTEP outputs (*.castep, *.castep_bin, *.geom, *.bands, *.cst_esp)
 - Generated datasets (*.csv)
+- ML models (models/, *.pkl, *.joblib)
+- Plots and figures (*.png)
+- Predictions (predictions.csv)
 - Temporary/auxiliary files (*.trjaux, *.kptaux)
 - Virtual environments (.venv/)
 
@@ -121,6 +137,67 @@ uv run ruff check --fix .
 - **Target**: Formation energy per atom (eV/atom)
 - **Format**: CSV with headers
 - **Validation**: Ensure no NaN values, check energy ranges are physical
+
+## Machine Learning Pipeline
+
+### Model Architecture
+- **Algorithm**: Gaussian Process Regression (GPR)
+- **Kernel**: Constant × RBF (Radial Basis Function)
+- **Advantages**: 
+  - Uncertainty quantification (critical for small datasets)
+  - Non-parametric (no assumptions about functional form)
+  - Smooth interpolation between data points
+  - Physically interpretable length scales
+
+### Training Workflow
+1. **Load dataset**: Validate presence of required columns
+2. **Configure GPR**: Set kernel hyperparameters (optimized during training)
+3. **Fit model**: Train on DFT data points
+4. **Evaluate**: 
+   - Leave-one-out cross-validation (LOO CV)
+   - R², MAE, RMSE metrics
+   - Uncertainty quantification
+5. **Predict**: Generate smooth curve across composition range (0-100% Al)
+6. **Visualize**: Plot DFT data, GPR prediction, and 95% confidence intervals
+7. **Save**: Store model (*.pkl) and predictions (*.csv)
+
+### Model Evaluation Metrics
+- **R² Score**: Goodness of fit (closer to 1.0 is better)
+- **MAE** (Mean Absolute Error): Average prediction error magnitude
+- **RMSE** (Root Mean Squared Error): Penalizes larger errors more
+- **CV MAE**: Cross-validated MAE (more robust for small datasets)
+- **Mean σ**: Average prediction uncertainty across composition range
+
+### Command-Line Options
+```bash
+# Basic training (plot only)
+uv run python train_ml.py
+
+# Save trained model for later use
+uv run python train_ml.py --save-model
+
+# Save predictions to CSV
+uv run python train_ml.py --save-predictions
+
+# Custom dataset and output paths
+uv run python train_ml.py --dataset my_data.csv --output my_plot.png
+
+# Adjust prediction resolution
+uv run python train_ml.py --n-points 500
+```
+
+### Model Interpretation
+- **Length scale**: Controls smoothness (larger = smoother predictions)
+- **Constant value**: Controls output variance (amplitude of variations)
+- **Alpha**: Noise level / regularization (prevents overfitting)
+- **95% CI bands**: Wider bands indicate higher uncertainty (e.g., in extrapolation regions)
+
+### Small Dataset Considerations
+- Use Leave-One-Out CV instead of k-fold (maximizes training data)
+- GPR is well-suited for small datasets (~5-50 points)
+- Avoid complex models (neural networks) that require more data
+- Report uncertainty alongside predictions
+- Be cautious about extrapolation beyond training composition range
 
 ## Error Handling
 
