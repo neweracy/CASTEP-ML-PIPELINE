@@ -1,0 +1,21 @@
+# Normalize line endings across platforms.
+* text=auto eol=lf
+
+# --- GitHub Linguist: report the project as Python ---
+# Materials Studio / CASTEP inputs and data are not source code; excluding them
+# from language stats keeps the repository correctly classified as Python.
+*.xsd      linguist-vendored
+*.xsd      linguist-detectable=false
+*.pl       linguist-language=Perl
+scripts/** linguist-vendored
+data/**    linguist-generated
+docs/**    linguist-documentation
+
+# Treat notebooks and lock files as generated (kept out of language stats).
+*.ipynb linguist-generated
+uv.lock  linguist-generated
+
+# Binary assets (no diff/merge as text).
+*.png  binary
+*.pkl  binary
+*.xsd  binary

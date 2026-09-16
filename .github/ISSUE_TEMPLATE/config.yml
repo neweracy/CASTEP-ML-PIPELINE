@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or discussion
+    url: https://github.com/neweracy/CASTEP-ML-PIPELINE/discussions
+    about: Ask questions about usage, DFT settings, or the modeling approach.

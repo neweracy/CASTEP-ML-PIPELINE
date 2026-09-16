@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Linter: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 A small, reproducible pipeline that turns **CASTEP density functional theory
 (DFT)** calculations into a **machine-learning surrogate model** for the
@@ -173,6 +174,8 @@ and 3.12. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the full workflow.
 - [`docs/GRAPH_GUIDE.md`](docs/GRAPH_GUIDE.md) — how to read the formation-energy curve.
 - [`docs/CLAUDE.md`](docs/CLAUDE.md) — development guidelines and conventions.
 - [`docs/IMPROVEMENTS.md`](docs/IMPROVEMENTS.md) — engineering changelog.
+- [`CHANGELOG.md`](CHANGELOG.md) — released and unreleased changes.
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) · [`SECURITY.md`](SECURITY.md)
 
 ## Roadmap
 
