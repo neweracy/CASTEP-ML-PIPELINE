@@ -158,24 +158,24 @@ def load_dataset(filepath: str) -> Tuple[np.ndarray, np.ndarray, pd.DataFrame]:
 
 ### Basic Training
 ```bash
-uv run python train_ml.py
+uv run dft-train
 ```
-Generates plot only, displays on screen.
+Generates the plot only.
 
 ### Production Training
 ```bash
-uv run python train_ml.py --save-model --save-predictions
+uv run dft-train --save-model --save-predictions
 ```
 Saves:
 - `models/gpr_model.pkl` - Trained model
-- `predictions.csv` - 200 predictions with uncertainties
-- `formation_energy_curve.png` - High-res plot
+- `outputs/predictions.csv` - 200 predictions with uncertainties
+- `outputs/formation_energy_curve.png` - High-res plot
 
 ### Custom Configuration
 ```bash
-uv run python train_ml.py \
-  --dataset my_custom_data.csv \
-  --output ti_al_energy.png \
+uv run dft-train \
+  --dataset data/processed/alloy_ml_dataset.csv \
+  --output outputs/ti_al_energy.png \
   --n-points 500 \
   --save-model
 ```
@@ -241,3 +241,24 @@ Key achievements:
 - 🎨 Professional visualizations
 - ⚠️ Proper error handling
 - 🧪 Ready for expansion to more complex models
+
+---
+
+## Update: packaging & reproducibility milestone
+
+The prototype scripts (`parse_castep.py`, `train_ml.py`) were consolidated into
+an installable package, `dft_ml_pipeline`, under a `src/` layout. Highlights:
+
+- **Package modules**: `config` (reference energies + paths), `parsing`
+  (CASTEP parsing, refactored with a `StructureRecord` dataclass and pure,
+  testable functions), and `modeling` (GPR training/evaluation/plotting).
+- **Console entry points**: `dft-parse` and `dft-train` replace the old
+  `python <script>.py` invocations.
+- **Reference-energy consistency**: `MU_AL` was standardized to the verified
+  value `-110.897059 eV/atom` (derived from `data/raw/Al.castep`), resolving a
+  prior discrepancy in the documentation.
+- **Test suite**: `pytest` coverage for the parser (synthetic CASTEP fixtures)
+  and modeling utilities; the plotting path runs headless via the Agg backend.
+- **CI & hooks**: GitHub Actions runs lint + format-check + tests on
+  Python 3.9 / 3.11 / 3.12; pre-commit runs ruff and black locally.
+- **Determinism**: the GPR is seeded (`random_state=0`) for reproducible fits.

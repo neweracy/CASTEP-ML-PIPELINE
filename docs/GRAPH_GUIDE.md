@@ -345,7 +345,7 @@ A: DFT calculations are expensive (hours to days per structure). We use ML to pr
 A: No. Always check the uncertainty bands. Wide bands = low confidence = need more DFT data.
 
 **Q: What if I add more DFT points?**  
-A: Rerun `uv run python train_ml.py` after updating `alloy_ml_dataset.csv`. The model will automatically retrain with new data.
+A: Rerun `uv run dft-train` (or `make train`) after updating `data/processed/alloy_ml_dataset.csv`. The model will automatically retrain with new data.
 
 **Q: Why is the curve smooth and not jagged?**  
 A: The RBF kernel enforces smoothness. This is physically reasonable (formation energy changes gradually with composition).
