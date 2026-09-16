@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "DFT-ML Pipeline for Ti-Al Alloys"
+message: "If you use this software, please cite it using these metadata."
+type: software
+authors:
+  - name: "neweracy"
+repository-code: "https://github.com/neweracy/CASTEP-ML-PIPELINE"
+abstract: >-
+  A reproducible pipeline that extracts formation energies from CASTEP
+  density functional theory (DFT) output files for the Ti-Al binary alloy
+  system and trains a Gaussian Process Regression surrogate model to predict
+  formation energies across the full composition range with calibrated
+  uncertainty estimates.
+keywords:
+  - density functional theory
+  - CASTEP
+  - materials science
+  - machine learning
+  - Gaussian process regression
+  - formation energy
+  - titanium aluminide
+license: MIT
+version: 0.1.0
+date-released: "2026-09-16"

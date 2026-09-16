@@ -1,51 +1,57 @@
-.PHONY: help install dev-install run train train-quick format lint lint-fix clean clean-all test check
+.PHONY: help install dev-install parse train train-quick format lint lint-fix \
+        typecheck test cov clean clean-all check hooks
 
 help:  ## Show this help message
 	@echo "Available commands:"
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 	@echo ""
 	@echo "Documentation (in docs/):"
-	@echo "  README.md       - Project overview and quick start"
-	@echo "  CLAUDE.md       - Development guidelines and best practices"
-	@echo "  GRAPH_GUIDE.md  - Understanding the formation energy curve"
-	@echo "  IMPROVEMENTS.md - Code improvements summary"
-	@echo "  PROJECT_STRUCTURE.md - File organization guide"
+	@echo "  PROJECT_STRUCTURE.md - Repository layout"
+	@echo "  GRAPH_GUIDE.md       - Interpreting the formation-energy curve"
+	@echo "  IMPROVEMENTS.md      - Engineering changelog"
+	@echo "  CLAUDE.md            - Development guidelines"
 
-install:  ## Install project dependencies
+install:  ## Install runtime dependencies
 	uv sync
 
-dev-install:  ## Install project with dev dependencies
+dev-install:  ## Install with development dependencies
 	uv sync --extra dev
 
-run:  ## Run the CASTEP parser
-	uv run python src/parse_castep.py
+parse:  ## Parse CASTEP files into the ML dataset
+	uv run dft-parse
 
-train:  ## Train ML model (saves model and predictions)
-	uv run python src/train_ml.py --save-model --save-predictions
+train:  ## Train the GPR model and save model + predictions
+	uv run dft-train --save-model --save-predictions
 
-train-quick:  ## Train ML model without saving
-	uv run python src/train_ml.py
+train-quick:  ## Train without saving artifacts
+	uv run dft-train
 
 format:  ## Format code with black
-	uv run black src/ scripts/
+	uv run black src/ tests/
 
 lint:  ## Lint code with ruff
-	uv run ruff check src/ scripts/
+	uv run ruff check src/ tests/
 
-lint-fix:  ## Fix auto-fixable lint issues
-	uv run ruff check --fix src/ scripts/
+lint-fix:  ## Auto-fix lint issues
+	uv run ruff check --fix src/ tests/
 
-clean:  ## Remove generated files and caches
-	rm -rf __pycache__ .pytest_cache .ruff_cache
+test:  ## Run the test suite
+	uv run pytest
+
+cov:  ## Run tests with coverage report
+	uv run pytest --cov --cov-report=term-missing
+
+hooks:  ## Install pre-commit hooks
+	uv run pre-commit install
+
+clean:  ## Remove generated data, outputs, and caches
+	rm -rf .pytest_cache .ruff_cache .coverage htmlcov
 	rm -rf data/processed/*.csv
 	rm -rf outputs/*.png outputs/*.csv
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
 
-clean-all: clean  ## Remove generated files, caches, and trained models
+clean-all: clean  ## Also remove trained models
 	rm -rf models/*.pkl models/*.joblib
 
-test:  ## Run tests (when implemented)
-	uv run pytest
-
-check: format lint  ## Format and lint code
+check: format lint test  ## Format, lint, and test

@@ -1,8 +1,30 @@
 [project]
 name = "dft-ml-pipeline"
 version = "0.1.0"
-description = "DFT to ML Pipeline for Ti-Al Alloy Formation Energy Prediction"
+description = "DFT-to-ML pipeline for Ti-Al alloy formation-energy prediction with Gaussian Process Regression"
+readme = "README.md"
 requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "neweracy" }]
+keywords = [
+    "dft",
+    "castep",
+    "materials-science",
+    "machine-learning",
+    "gaussian-process",
+    "formation-energy",
+    "titanium-aluminide",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "pandas>=2.0.0",
     "numpy>=1.24.0",
@@ -12,22 +34,41 @@ dependencies = [
     "joblib>=1.3.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/neweracy/CASTEP-ML-PIPELINE"
+Repository = "https://github.com/neweracy/CASTEP-ML-PIPELINE"
+Issues = "https://github.com/neweracy/CASTEP-ML-PIPELINE/issues"
+
 [project.optional-dependencies]
 dev = [
     "jupyter>=1.0.0",
     "ipython>=8.0.0",
     "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
     "black>=23.0.0",
     "ruff>=0.1.0",
+    "pre-commit>=3.0.0",
 ]
+
+[project.scripts]
+dft-parse = "dft_ml_pipeline.parsing:main"
+dft-train = "dft_ml_pipeline.modeling:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dft_ml_pipeline"]
 
 [tool.black]
 line-length = 88
-target-version = ['py39']
+target-version = ["py39"]
 
 [tool.ruff]
 line-length = 88
 target-version = "py39"
+src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = [
@@ -37,5 +78,20 @@ select = [
     "I",   # isort
     "N",   # pep8-naming
     "UP",  # pyupgrade
+    "B",   # flake8-bugbear
 ]
-ignore = ["E501"]  # line too long (handled by black)
+ignore = ["E501"] # line too long (handled by black)
+
+[tool.ruff.lint.per-file-ignores]
+# Dataset column names intentionally use PascalCase to match the CSV schema.
+"src/dft_ml_pipeline/parsing.py" = ["N815"]
+"tests/*" = ["N802", "N806"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+source = ["dft_ml_pipeline"]
+branch = true
