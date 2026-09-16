@@ -217,7 +217,7 @@ def save_predictions(
     X_pred: np.ndarray,
     y_pred: np.ndarray,
     sigma: np.ndarray,
-    filepath: str = "predictions.csv",
+    filepath: str = "outputs/predictions.csv",
 ):
     """
     Save predictions and uncertainties to CSV.
@@ -251,7 +251,7 @@ def main():
     parser.add_argument(
         "--dataset",
         type=str,
-        default="alloy_ml_dataset.csv",
+        default="data/processed/alloy_ml_dataset.csv",
         help="Path to the DFT dataset CSV",
     )
     parser.add_argument(
@@ -273,7 +273,7 @@ def main():
     parser.add_argument(
         "--output",
         type=str,
-        default="formation_energy_curve.png",
+        default="outputs/formation_energy_curve.png",
         help="Output path for the plot",
     )
 

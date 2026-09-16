@@ -75,12 +75,12 @@ def parse_castep_files(directory_path):
 # Run the parser
 if __name__ == "__main__":
     # Point this to the folder containing all your completed CASTEP batch runs
-    folder_path = "./ML_Data"
+    folder_path = "data/raw"
 
     dataset = parse_castep_files(folder_path)
     print(dataset)
 
     # Save the clean data for your ML model
-    output_path = "./alloy_ml_dataset.csv"
+    output_path = "data/processed/alloy_ml_dataset.csv"
     dataset.to_csv(output_path, index=False)
     print(f"\nDataset successfully saved to {output_path}!")

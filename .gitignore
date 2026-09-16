@@ -48,15 +48,14 @@ wheels/
 ~*.xsd
 
 # Generated Data
-*.csv
-ML_Data/*.csv
+data/processed/*.csv
 
 # ML Models and Outputs
-models/
-*.pkl
-*.joblib
-*.png
-predictions.csv
+models/*.pkl
+models/*.joblib
+outputs/*.png
+outputs/*.csv
+outputs/predictions.csv
 
 # Temporary/Task Folders
 ~TASK_*/
